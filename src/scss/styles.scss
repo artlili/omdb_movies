@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 14px;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  color: #34495e;
+}
+
+h1 {
+  font-size: 28px;
+  text-align: center;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto;
+  @media (max-width: 768px) {
+    max-width: 380px;
+  }
+}
+.form {
+  padding: 30px 0;
+  background: #d6dbdf;
+  border: 1px solid #c3c4c5;
+  border-radius: 4px;
+  margin: 20px 0 30px;
+
+  &-search {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    > div {
+      margin: 5px;
+    }
+  }
+
+  .label {
+    font-size: 17px;
+    margin-right: 5px;
+  }
+
+  .input {
+    border: 2px solid #bdc3c7;
+    color: #34495e;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.467;
+    padding: 8px 12px;
+    width: 180px;
+    height: 42px;
+    border-radius: 4px;
+    outline: 0;
+    box-shadow: none;
+    margin-right: 15px;
+
+  }
+
+  .btn {
+    display: inline-block;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.4;
+    border-radius: 4px;
+    padding: 10px 30px;
+    margin-right: 5px;
+    -webkit-font-smoothing: subpixel-antialiased;
+    transition: border .25s linear, color .25s linear, background-color .25s linear;
+    &-primary {
+      color: white;
+      background-color: #1abc9c;
+    }
+  }
+
+  .select {
+    position: relative;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 6px solid #bdc3c7;
+      position: absolute;
+      right: 28px;
+      top: 18px;
+    }
+
+    &-drop {
+      display: none;
+      position: absolute;
+      width: 174px;
+      background: #fff;
+      right: 17px;
+      top: 102%;
+      z-index: 10;
+      border: 2px solid #bdc3c7;
+      border-radius: 0 0 4px 4px;
+      > span {
+        display: block;
+        padding: 10px 15px;
+        border-bottom: 1px solid #bdc3c7;
+        cursor: pointer;
+      }
+
+    }
+    &.open {
+      .select-drop {
+        display: block;
+      }
+      &::before {
+        border-top-color: #1abc9c;
+        transform: rotate(180deg)
+      }
+
+      .input {
+        border-color: #1abc9c;
+      }
+    }
+  }
+}
+#movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+  @media (max-width: 768px) {
+    max-width: 380px;
+  }
+  padding: 15px;
+
+
+  .movie {
+    flex: 1 32%;
+    margin: 5px;
+    max-width: 32%;
+    height: 500px;
+
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -2;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      background-image: url(http://motivatevalmorgan.com/wp-content/uploads/2016/06/default-movie-1-3.jpg);
+      background-size: cover;
+      background-position: center center;
+
+    }
+
+    @media (max-width: 992px) {
+      flex: 1 47%;
+      max-width: 47%;
+    }
+    @media (max-width: 768px) {
+      flex: 1 100%;
+      max-width: 100%;
+    }
+  }
+}

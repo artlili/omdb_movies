@@ -1,0 +1,49 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <title>OMDB Movies</title>
+    </head>
+    <body>
+
+
+        <div class="container">
+          <h1>OMDB Movies</h1>
+          <div class="form">
+            <form class="form-search" onsubmit="return false;">
+              <div>
+                <label class="label" for="title">Title:</label>
+                <input type="text" id="title" name="title" class="input">
+              </div>
+
+              <div>
+                <label class="label" for="year">Year:</label>
+                <input type="text" id="year" name="year" class="input">
+              </div>
+                  <div class="select">
+                    <label class="label" for="type">Type:</label>
+                    <input type="text" id="type" name="type" class="input" readonly>
+                    <div class="select-drop" id="text">
+                      <span class="select-list">movies</span>
+                      <span class="select-list">series</span>
+                      <span class="select-list">episode</span>
+                    </div>
+                  </div>
+                  <div>
+                    <button id="search-button" type="button" class="btn btn-primary" disabled>Search</button>
+                    <button id="reset-button" type="reset" class="btn">Reset</button>
+                  </div>
+
+            </form>
+
+        </div>
+        <div id="movies"></div>
+      </div>
+
+
+        <!-- plugin initialization -->
+        <script src="index.js"></script>
+    </body>
+</html>
