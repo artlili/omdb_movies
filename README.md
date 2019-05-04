@@ -1,6 +1,6 @@
 # OMDB Movies api
 
-### Clone this repo
+Demo [OMDB Movies](http://portfolio.10dev.ru/omdb_movies/)
 
 ### Installation
 
@@ -9,7 +9,7 @@ Requires [Node.js](https://nodejs.org/) + to run.
 Install the dependencies and devDependencies and start the server.
 
 ```sh
-$ cd js-plugin-starter
+$ cd omdb_movies
 $ npm install
 ```
 For developer environments...
